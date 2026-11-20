@@ -66,6 +66,30 @@
     .launch:hover { background: #fff; box-shadow: inset 0 1px 2px #fff, 0 4px 16px rgb(45 27 12 / 22%); }
     .launch:active { background: #f2efeb; }
     .launch:focus-visible { outline: 3px solid #352a25; outline-offset: 4px; }
+    .connection-help {
+      margin-top: 1.1rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid rgb(38 27 21 / 16%);
+      color: #292320;
+      font-size: .93rem;
+    }
+    .connection-help summary {
+      cursor: pointer;
+      width: fit-content;
+      font-weight: 650;
+    }
+    .connection-help p { margin: .6rem 0 .8rem; max-width: 31ch; }
+    .retry {
+      display: inline-flex;
+      padding: .3rem .75rem;
+      border: 1px solid rgb(38 27 21 / 24%);
+      border-radius: 999px;
+      color: #251f1b;
+      background: rgb(255 255 255 / 44%);
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .retry:hover { background: rgb(255 255 255 / 75%); }
     @media (max-width: 640px) {
       main { padding-inline: max(1rem, env(safe-area-inset-left)) max(1rem, env(safe-area-inset-right)); }
       .entry { width: min(100%, 25rem); }
@@ -83,7 +107,12 @@
       <p class="lab">Yunwang Lab</p>
       <h1 id="entry-title">Agent 协作台</h1>
       <p class="description">从已安装协作台的 Mac 打开，即可进入聊天和实时纸面大屏。</p>
-      <a class="launch" href="http://127.0.0.1:4173/studio" rel="noreferrer">打开本机协作台 <span aria-hidden="true">↗</span></a>
+      <a class="launch" href="http://127.0.0.1:4173/studio" target="_blank" rel="noopener noreferrer">打开本机协作台 <span aria-hidden="true">↗</span></a>
+      <details class="connection-help">
+        <summary>打不开？</summary>
+        <p>请在已安装协作台的 Mac 上打开。若已在这台 Mac 上，重新启动协作台服务后再试一次。</p>
+        <a class="retry" href="http://127.0.0.1:4173/studio" target="_blank" rel="noopener noreferrer">重试 <span aria-hidden="true">↗</span></a>
+      </details>
     </section>
   </main>
 </body>
